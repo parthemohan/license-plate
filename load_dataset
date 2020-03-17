@@ -1,0 +1,43 @@
+
+from PIL import Image
+import requests
+import cv2
+from io import BytesIO
+import json
+import pandas as pd
+'''
+def crop(image_path, coords, saved_location):
+    """
+    @param image_path: The path to the image to edit
+    @param coords: A tuple of x/y coordinates (x1, y1, x2, y2)
+    @param saved_location: Path to save the cropped image
+    """
+    image_obj = Image.open(image_path)
+    cropped_image = image_obj.crop(coords)
+    cropped_image.save(saved_location)
+    cropped_image.show()
+'''
+with open('Indian_Number_plates.json', 'r') as f:
+    data = f.readlines()
+
+    data = [json.loads(line) for line in data]
+
+df=pd.DataFrame(data)
+print(df)
+'''
+
+i=0
+for distro in data:
+    i=i+1
+
+    df=pd.DataFrame(distro["content"])
+    #im.show()
+#print(i)
+
+'''
+'''
+a=(1,2,3,4)
+
+
+print(type(a))
+'''
